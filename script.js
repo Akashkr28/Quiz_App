@@ -1,6 +1,6 @@
 const questions = [
     {
-        questions: "Which tag is used to define a hyperlink in HTML?",
+        question: "Which tag is used to define a hyperlink in HTML?",
         answer: [
             { text: "`<a>`", correct: true},
             { text: "`<link>`", correct: false},
@@ -9,7 +9,7 @@ const questions = [
         ]
     },
     {
-        questions: "How can you center an element horizontally in CSS?",
+        question: "How can you center an element horizontally in CSS?",
         answer: [
             { text: "`text-align: center;`", correct: false},
             { text: "`margin: auto;`", correct: true},
@@ -18,7 +18,7 @@ const questions = [
         ]
     },
     {
-        questions: "What will the following code output - console.log(typeof [])?",
+        question: "What will the following code output - console.log(typeof [])?",
         answer: [
             { text: "array", correct: false},
             { text: "object", correct: true},
@@ -27,7 +27,7 @@ const questions = [
         ]
     },
     {
-        questions: "What does HTML stand for?",
+        question: "What does HTML stand for?",
         answer: [
             { text: "Hyper Transfer Markup Language", correct: false},
             { text: "Hyper Text Markup Language", correct: true},
@@ -36,7 +36,7 @@ const questions = [
         ]
     },
     {
-        questions: "How can you make text italic in CSS",
+        question: "How can you make text italic in CSS",
         answer: [
             { text: "`font-style: italic;`", correct: true},
             { text: "`text-style: italic;`", correct: false},
@@ -61,7 +61,8 @@ function startQuiz() {
 }
 
 function showQuestion() {
-    let currentQuestion = question[currentQuestionIndex];
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
@@ -72,3 +73,13 @@ function showQuestion() {
         answerButton.appendChild(button);
     });
 }
+
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.remove
+    }
+}
+
+startQuiz();
