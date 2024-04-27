@@ -43,7 +43,7 @@ const questions = [
             { text: "`italic: true;`", correct: false},
             { text: "`style: italic;`", correct: false},
         ]
-    },
+    }
 ];
 
 const questionElement = document.getElementById("question");
@@ -121,7 +121,7 @@ function handleNextButton(){
 }
 
 nextButton.addEventListener("click", ()=>{
-    if(currentQuestionIndex < question.length){
+    if(currentQuestionIndex < questions.length){
         handleNextButton();
     }else{
         startQuiz();
