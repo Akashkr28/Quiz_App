@@ -47,7 +47,7 @@ const questions = [
 ];
 
 const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer_btns");
+const answerButton = document.getElementById("answer_btns");
 const nextButton = document.getElementById("next_btn");
 
 let currentQuestionIndex = 0;
@@ -70,7 +70,7 @@ function showQuestion() {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
-        answerButtons.appendChild(button);
+        answerButton.appendChild(button);
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
